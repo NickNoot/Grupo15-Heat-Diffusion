@@ -139,9 +139,6 @@ class ParallelHeatDiffusionSolver(BaseHeatDiffusion):
             # Isso garante que as bordas permaneçam fixas.
             self._apply_boundary_conditions(self.current_grid)
 
-            # Mantém a temperatura do hotspot constante.
-            if hotspot_pos:
-                self.current
 
             # Mantém a temperatura do hotspot constante.
             # Esta operação é segura para ser feita pelo thread principal, pois não interfere
@@ -216,3 +213,4 @@ if __name__ == "__main__":
         print("\nMatplotlib não está instalado. Para visualização, instale com 'pip install matplotlib'.")
     except Exception as e:
         print(f"\nErro inesperado ao tentar plotar os resultados: {e}")
+
